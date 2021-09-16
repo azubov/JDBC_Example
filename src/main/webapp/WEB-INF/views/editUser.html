@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>UPDATE User</h2>
+<form th:object="${user}" name="user" action="/updateUser" method="post">
+    <p>Id</p>
+    <input title="Id" type="text" name="id" th:value="${user.getId()}">
+    <p>Name</p>
+    <input title="Name" type="text" name="name" th:value="${user.getName()}">
+    <p>Email</p>
+    <input title="Email" type="text" name="email" th:value="${user.getEmail()}">
+    <p>Age</p>
+    <input title="Age" type="text" name="age" th:value="${user.getAge()}">
+    <button type="submit">Update User</button>
+</form>
+
+</body>
+</html>
